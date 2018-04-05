@@ -7,3 +7,5 @@ firefox*.bz2
 
 # JetBrains IDEs
 .idea
+
+package-lock.json

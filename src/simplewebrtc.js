@@ -166,9 +166,10 @@ function SimpleWebRTC(opts) {
         self.emit('stunservers', args);
     });
     connection.on('turnservers', function (args) {
-        // appends to the config
-        self.webrtc.config.peerConnectionConfig.iceServers = self.webrtc.config.peerConnectionConfig.iceServers.concat(args);
-        self.emit('turnservers', args);
+      console.log('*LEV* skip turnserver override');
+        // // appends to the config
+        // self.webrtc.config.peerConnectionConfig.iceServers = self.webrtc.config.peerConnectionConfig.iceServers.concat(args);
+        // self.emit('turnservers', args);
     });
 
     this.webrtc.on('iceFailed', function (peer) {
